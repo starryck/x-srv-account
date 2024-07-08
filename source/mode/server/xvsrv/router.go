@@ -1,7 +1,11 @@
 package xvsrv
 
 import (
+	"net/http"
+
 	"github.com/forbot161602/x-lib-go/source/module/xbgin"
+
+	"github.com/forbot161602/x-srv-account/source/mode/server/xvview"
 )
 
 var mRouter *xbgin.Router
@@ -22,7 +26,14 @@ func newRouter() *xbgin.Router {
 	return router
 }
 
-var routerStems = []xbgin.RouterStem{}
+var routerStems = []xbgin.RouterStem{
+	{
+		Path: "internal/",
+		Leaves: []xbgin.RouterLeaf{
+			{Method: http.MethodGet, Path: "info/", Handlers: xvview.ViewInternalInfoHandlers},
+		},
+	},
+}
 
 type routerBuilder struct {
 	router *xbgin.Router
