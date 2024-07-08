@@ -8,6 +8,7 @@ import (
 	"github.com/forbot161602/x-srv-account/source/entry/xvinfo"
 	_ "github.com/forbot161602/x-srv-account/source/entry/xvpreset"
 	"github.com/forbot161602/x-srv-account/source/entry/xvscript"
+	"github.com/forbot161602/x-srv-account/source/entry/xvserver"
 )
 
 var (
@@ -45,6 +46,15 @@ func init() {
 				ArgsUsage: "[arguments...]",
 				Action: func(c *cli.Context) error {
 					return xvscript.Execute()
+				},
+			},
+			&cli.Command{
+				Name:      "run-server",
+				Usage:     "Launch a server",
+				HelpName:  "run-server",
+				ArgsUsage: "[arguments...]",
+				Action: func(c *cli.Context) error {
+					return xvserver.Execute()
 				},
 			},
 		},
