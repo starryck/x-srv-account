@@ -1,26 +1,26 @@
 package xvview
 
 import (
-	"github.com/forbot161602/x-srv-account/source/core/base/xvcfg"
-	"github.com/forbot161602/x-srv-account/source/core/base/xvmtmsg"
+	"github.com/starryck/x-srv-account/source/core/base/xvcfg"
+	"github.com/starryck/x-srv-account/source/core/base/xvmtmsg"
 )
 
-var ViewInternalInfoHandlers = []Handler{
+var ReadInternalInfoHandlers = []Handler{
 	InternalRequestHandler,
-	ViewInternalInfoHandler,
+	ReadInternalInfoHandler,
 }
 
-func ViewInternalInfoHandler(ctx *Context) {
-	flow := &ViewInternalInfoHandlerFlow{}
+func ReadInternalInfoHandler(ctx *Context) {
+	flow := &ReadInternalInfoHandlerFlow{}
 	flow.Initiate(ctx)
 	flow.SetResult()
 }
 
-type ViewInternalInfoHandlerFlow struct {
+type ReadInternalInfoHandlerFlow struct {
 	APISIXFlow
 }
 
-func (flow *ViewInternalInfoHandlerFlow) SetResult() {
+func (flow *ReadInternalInfoHandlerFlow) SetResult() {
 	if flow.HasError() {
 		return
 	}

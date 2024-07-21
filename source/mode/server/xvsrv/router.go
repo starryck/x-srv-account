@@ -3,9 +3,9 @@ package xvsrv
 import (
 	"net/http"
 
-	"github.com/forbot161602/x-lib-go/source/module/xbgin"
+	"github.com/starryck/x-lib-go/source/module/xbgin"
 
-	"github.com/forbot161602/x-srv-account/source/mode/server/xvview"
+	"github.com/starryck/x-srv-account/source/mode/server/xvview"
 )
 
 var mRouter *xbgin.Router
@@ -30,7 +30,7 @@ var routerStems = []xbgin.RouterStem{
 	{
 		Path: "internal/",
 		Leaves: []xbgin.RouterLeaf{
-			{Method: http.MethodGet, Path: "info/", Handlers: xvview.ViewInternalInfoHandlers},
+			{Method: http.MethodGet, Path: "info/", Handlers: xvview.ReadInternalInfoHandlers},
 		},
 	},
 }

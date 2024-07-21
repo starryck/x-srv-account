@@ -1,10 +1,10 @@
-module github.com/forbot161602/x-srv-account
+module github.com/starryck/x-srv-account
 
 go 1.22.5
 
 require (
-	github.com/forbot161602/x-lib-go v0.0.0-20240708000239-bd81919de9d6
 	github.com/joho/godotenv v1.5.1
+	github.com/starryck/x-lib-go v0.0.0-20240720141511-de0e236c2f42
 	github.com/urfave/cli/v2 v2.27.2
 )
 

@@ -1,9 +1,9 @@
 package xvinfo
 
 import (
-	"github.com/forbot161602/x-lib-go/source/core/utility/xblogger"
+	"github.com/starryck/x-lib-go/source/core/utility/xblogger"
 
-	"github.com/forbot161602/x-srv-account/source/core/base/xvcfg"
+	"github.com/starryck/x-srv-account/source/core/base/xvcfg"
 )
 
 func Execute() error {
