@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/forbot161602/x-lib-go/source/utility/xbspvs"
+	"github.com/starryck/x-lib-go/source/utility/xbspvs"
 
-	"github.com/forbot161602/x-srv-account/source/core/base/xvcfg"
-	"github.com/forbot161602/x-srv-account/source/mode/server/xvsrv"
+	"github.com/starryck/x-srv-account/source/core/base/xvcfg"
+	"github.com/starryck/x-srv-account/source/mode/server/xvsrv"
 )
 
 func Execute() error {
